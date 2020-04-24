@@ -23,5 +23,6 @@ stages:
     parameters:
       ServiceDirectory: iot
       Artifacts:
+        # Use the path "." to build artifacts from the service directory
         - Name: az_iot
           Path: .
