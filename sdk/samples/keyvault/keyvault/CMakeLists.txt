@@ -32,6 +32,8 @@ target_include_directories(${TARGET_NAME} PUBLIC
 # make sure that users can consume the project as a library.
 add_library (az::keyvault ALIAS ${TARGET_NAME})
 
+install_target_dep_sources(${TARGET_NAME})
+
 # set coverage excluding for az_core. Don't show coverage outside keyvault
 set(COV_EXCLUDE
     ${az_SOURCE_DIR}/sdk/core/core/inc/*

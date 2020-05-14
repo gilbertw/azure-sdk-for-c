@@ -29,6 +29,8 @@ target_link_libraries(${TARGET_NAME} PRIVATE az_iot_common)
 
 add_library (az::iot::hub ALIAS ${TARGET_NAME})
 
+install_target_dep_sources(${TARGET_NAME})
+
 # set coverage excluding for az_core. Don't show coverage outside iot
 set(COV_EXCLUDE
     ${az_SOURCE_DIR}/sdk/core/core/inc/*
