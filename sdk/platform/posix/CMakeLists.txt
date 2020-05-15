@@ -14,6 +14,4 @@ target_link_libraries(az_posix PRIVATE az_core)
 
 target_sources(az_posix PRIVATE src/az_posix.c)
 
-target_include_directories(az_posix PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/inc>)
-
 endif()
